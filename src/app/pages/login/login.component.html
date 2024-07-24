@@ -1,34 +1,32 @@
 <app-default-login-layout
-    title="Login into your account"
-    primaryBtnText="Login now"
-    secondaryBtnText="Sign up now"
-    (submit)="submit()"
-    (navigate)="navigate()"
-    [disablePrimaryBtn]="!loginForm.valid"
+  title="Login into your account"
+  primaryBtnText="Login now"
+  secondaryBtnText="Signup now"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!loginForm.valid"
 >
-    <form [formGroup]="loginForm">
-        <app-primary-input
-            formControlName="email"
-            inputName="email"
-            type="email"
-            label="Email"
-            placeholder="exemple@gmail.com"
-        >
+  <form [formGroup]="loginForm">
+    <app-primary-input
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="exemple@gmail.com"
+    >
+      <img src="../../../assets/svg/email-icon.svg" alt="icone email" />
+    </app-primary-input>
 
-            <img src="../../../assets/svg/email-icon.svg" alt="icone email"/>
-        </app-primary-input>
+    <app-primary-input
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Senha"
+      placeholder="exemple@gmail.com"
+    >
+      <img src="../../../assets/svg/password-icon.svg" alt="icone senha" />
+    </app-primary-input>
 
-        <app-primary-input
-            formControlName="password"
-            inputName="password"
-            type="password"
-            label="Senha"
-            placeholder="exemple@gmail.com"
-        >
-
-            <img src="../../../assets/svg/password-icon.svg" alt="icone senha"/>
-        </app-primary-input>
-
-        <span>Esqueceu sua senha?</span>
-    </form>
+    <span>Esqueceu sua senha?</span>
+  </form>
 </app-default-login-layout>
